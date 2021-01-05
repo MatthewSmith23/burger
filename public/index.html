@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<title>MVC With Burgers!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/js/cats.js"></script>
-	</head>
-	<body>
-		<h1> Burgers!</h1>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubsBurgers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIfeK1dGmJRAkycuHAHRg320mUcww7on3RYdg4a+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/index.js"></script>
+</head>
+<body class="container center background">
+    <div class="row">
+        <h1>Welcome to BubsBurgers</h1>
+        <h2>PCELUVCHUNK</h2>
+    </div>
 
-		<h2>Burgers in your belly!</h2>
+    <div class="row">
+        <h3>Burgers ordered:</h3>
+        <ul style="list-style-position: inside;" id="burgersOrdered"></ul>
 
-		<ul id= "notDevouredBurgers"></ul>
+        <h3>Burgers eaten:</h3>
+        <ul style="list-style-position: inside;" id="burgersDevoured"></ul>
 
-		<h2>Burgers waiting to be devoured!</h2>
-		
-		<ul id="devouredBurgers"></ul>
+        <h2>What would you like??</h2>
+        <h4>Examples: Bacon Cheese Burger, Hamburger, Cheeseburger, Veggie.. etc.</h4>
+        <form class="create-form">
+            <div class="form-group">
+                <label for="ca">Burger Order:</label>
+                <input type="text" id="ca" name="name" />
+            </div>
 
-		<h2>Add a Burger</h2>
+            <div class="form-group">
+                <input type="radio" name="devoured" value="1" checked /> To order<br />
+                <input type="radio" name="devoured" value="0" /> Has been eaten before
+            </div>
+            <button type="submit">Add burger</button>
+        </form>
 
-		<form class="create-form">
-			<div class="form-group">
-				<label for="ca">Burger Name:</label>
-				<input type="text" id="ca" name="name" />
-			</div>
 
-			<div class="form-group">
-				<label for="devoured">Hungry?</label><br />
-				<input type="radio" name="devoured" value="0" /> Im Full!
-			</div>
 
-			<button type="submit">Add Burger</button>
-		</form>
-
-	</body>
+    </div>
+    
+</body>
 </html>
